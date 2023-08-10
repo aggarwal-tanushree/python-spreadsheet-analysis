@@ -71,9 +71,9 @@ def monthly_profit():
             exp.append(int(row['expenditure']))
             profits.append(profit)
 
-    print(sale)
-    print(exp)
-    print(profits)
+    # print(sale)
+    # print(exp)
+    # print(profits)
 
     with open('./output_data/2018_profit.csv', 'w', encoding='utf-8', newline='') as write_csv:
         field_names = ['Sales', 'Expenditure', 'Profit']
@@ -82,7 +82,7 @@ def monthly_profit():
         writer = csv.writer(write_csv, delimiter=',')
         writer.writerows(zip(sale,exp,profits))
 
-
+    # Using Pandas
     data = {'Sales': sale,
         'Expenditure': exp,
         'Profit': profits}
